@@ -594,7 +594,24 @@ footer p {
 .document-number {
   font-size: 1.5rem;
 }
-  
+
+  .think-grid {
+  grid-template-columns: 1fr;
+}
+
+.think-card {
+  padding: 18px;
+}
+
+.think-cta {
+  align-items: stretch;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.social-box {
+  width: 100%;
+}
   html {
     scroll-padding-top: 125px;
   }
