@@ -205,23 +205,45 @@ footer p {
 }
 
 @media (max-width: 700px) {
-.hero {
-  min-height: 72vh;
-}
 
-.hero-overlay {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(16, 47, 56, 0.65) 0%,
-      rgba(16, 47, 56, 0.88) 55%,
-      rgba(16, 47, 56, 0.97) 100%
-    );
-}
+  .hero {
+    min-height: 72vh;
+  }
 
-.hero-content {
-  width: calc(100% - 32px);
-  padding: 70px 0 55px;
+  .hero-image img {
+    object-position: 62% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(16, 47, 56, 0.38) 0%,
+        rgba(16, 47, 56, 0.72) 40%,
+        rgba(16, 47, 56, 0.97) 100%
+      );
+  }
+
+  .hero-content {
+    width: calc(100% - 32px);
+    padding: 65px 0 50px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .hero-question {
+    font-size: 1.25rem;
+  }
+
+  .hero-thesis {
+    font-size: 1.1rem;
+  }
 }
   header {
     padding: 55px 20px;
