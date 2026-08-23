@@ -209,3 +209,12 @@ footer p {
     padding: 28px 22px;
   }
 }
+.key-sentence {
+  margin-top: 32px;
+  padding: 22px 26px;
+  background: var(--orange-light);
+  border-left: 5px solid var(--orange);
+  color: var(--navy);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
