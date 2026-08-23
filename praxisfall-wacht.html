@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Praxisfall-Wacht | Maschinen-Sozialvertrag</title>
+
+  <meta
+    name="description"
+    content="Die Praxisfall-Wacht des Maschinen-Sozialvertrags beobachtet reale Entwicklungen bei KI, Robotik, Automatisierung, Physical AI, Arbeitswissen und gesellschaftlicher Teilhabe."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="praxisfall-wacht.css">
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="praxisfall-wacht.js" defer></script>
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html#top">Maschinen-Sozialvertrag</a>
+
+      <div class="nav-links">
+        <a href="index.html#msv">Der MSV</a>
+        <a href="index.html#fragen">5 Fragen</a>
+        <a href="index.html#dokumente">Dokumente</a>
+        <a class="nav-current" href="praxisfall-wacht.html">Praxisfall-Wacht</a>
+        <a href="index.html#mitdenken">Mitdenken</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <header class="watch-page-hero">
+    <div class="watch-page-hero-inner">
+      <p class="watch-page-kicker">MSV-PRAXISFALL-WACHT</p>
+
+      <h1>Was geschieht bereits heute?</h1>
+
+      <p class="watch-page-intro">
+        Reale Entwicklungen statt Zukunftsspekulation:
+        Die Praxisfall-Wacht beobachtet KI, Robotik und Automatisierung,
+        trennt Quellenarten und fragt nach Einsatzreife, Autonomie,
+        menschlichem Trainingswissen und gesellschaftlichen Folgen.
+      </p>
+
+      <div class="watch-page-principle">
+        Nicht jede Meldung ist ein neuer Praxisfall.
+        Neue Pressewelle ≠ neue Fall-ID.
+      </div>
+    </div>
+  </header>
+
+
+  <main class="watch-page-main">
+
+    <section class="watch-status-section" aria-labelledby="watch-status-title">
+
+      <div class="watch-section-heading">
+        <div>
+          <p class="watch-section-kicker">ÖFFENTLICHE WATCHLIST</p>
+          <h2 id="watch-status-title">Praxisfälle im Überblick</h2>
+        </div>
+
+        <div class="watch-live-status" id="dataStatus" role="status" aria-live="polite">
+          Daten werden geladen …
+        </div>
+      </div>
+
+
+      <div class="watch-kpis" aria-label="Kennzahlen der Praxisfall-Wacht">
+
+        <div class="watch-kpi">
+          <span class="watch-kpi-value" id="kpiTotal">–</span>
+          <span class="watch-kpi-label">Fälle gesamt</span>
+        </div>
+
+        <div class="watch-kpi">
+          <span class="watch-kpi-value" id="kpiVisible">–</span>
+          <span class="watch-kpi-label">aktuell angezeigt</span>
+        </div>
+
+        <div class="watch-kpi">
+          <span class="watch-kpi-value" id="kpiMature">–</span>
+          <span class="watch-kpi-label">Dauerbetrieb / Skalierung</span>
+        </div>
+
+        <div class="watch-kpi">
+          <span class="watch-kpi-value" id="kpiTraining">–</span>
+          <span class="watch-kpi-label">Trainingswissen = ja</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="watch-filter-section" aria-labelledby="watch-filter-title">
+
+      <div class="watch-section-heading watch-filter-heading">
+        <div>
+          <p class="watch-section-kicker">FILTERN &amp; SUCHEN</p>
+          <h2 id="watch-filter-title">75 Fälle – ohne 75 Karten durchsuchen zu müssen</h2>
+        </div>
+
+        <button class="watch-reset-button" id="resetFilters" type="button">
+          Filter zurücksetzen
+        </button>
+      </div>
+
+
+      <div class="watch-search-row">
+        <label class="watch-field watch-search-field">
+          <span>Suche</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="z. B. Tesla, Landwirtschaft, Trainingswissen, China …"
+            autocomplete="off"
+          >
+        </label>
+
+        <label class="watch-field">
+          <span>Sortierung</span>
+          <select id="sortSelect">
+            <option value="id-desc">Neueste Fall-ID zuerst</option>
+            <option value="id-asc">Älteste Fall-ID zuerst</option>
+            <option value="company-asc">Unternehmen A–Z</option>
+          </select>
+        </label>
+      </div>
+
+
+      <div class="watch-filter-grid">
+
+        <label class="watch-field">
+          <span>Branche</span>
+          <select id="filterIndustry">
+            <option value="">Alle Branchen</option>
+          </select>
+        </label>
+
+        <label class="watch-field">
+          <span>Einsatzreife</span>
+          <select id="filterReadiness">
+            <option value="">Alle Reifestufen</option>
+          </select>
+        </label>
+
+        <label class="watch-field">
+          <span>Autonomiegrad</span>
+          <select id="filterAutonomy">
+            <option value="">Alle Autonomiegrade</option>
+          </select>
+        </label>
+
+        <label class="watch-field">
+          <span>Trainingswissen</span>
+          <select id="filterTraining">
+            <option value="">Alle Angaben</option>
+          </select>
+        </label>
+
+        <label class="watch-field">
+          <span>Quellenstatus</span>
+          <select id="filterSource">
+            <option value="">Alle Quellenstatus</option>
+          </select>
+        </label>
+
+      </div>
+
+    </section>
+
+
+    <section class="watch-results-section" aria-labelledby="watch-results-title">
+
+      <div class="watch-results-head">
+        <div>
+          <p class="watch-section-kicker">GEPRÜFT &amp; EINGEORDNET</p>
+          <h2 id="watch-results-title">Praxisfälle</h2>
+        </div>
+
+        <p class="watch-result-count" id="resultCount">–</p>
+      </div>
+
+
+      <div class="watch-error" id="watchError" hidden>
+        <strong>Die öffentliche Datenansicht konnte nicht geladen werden.</strong>
+        <p id="watchErrorText">
+          Bitte die veröffentlichte Google-Sheets-Webansicht prüfen.
+        </p>
+      </div>
+
+
+      <div class="watch-public-grid" id="caseGrid" aria-live="polite"></div>
+
+
+      <div class="watch-load-actions" id="loadActions" hidden>
+        <button class="watch-primary-button" id="loadMore" type="button">
+          Weitere 12 anzeigen
+        </button>
+
+        <button class="watch-secondary-button" id="showAll" type="button">
+          Alle gefilterten Fälle anzeigen
+        </button>
+      </div>
+
+
+      <div class="watch-empty" id="emptyState" hidden>
+        <strong>Keine Fälle gefunden.</strong>
+        <p>Versuche eine andere Suche oder setze einzelne Filter zurück.</p>
+      </div>
+
+    </section>
+
+
+    <section class="watch-source-section" aria-labelledby="watch-source-title">
+
+      <div class="watch-section-heading">
+        <div>
+          <p class="watch-section-kicker">QUELLENPRINZIP</p>
+          <h2 id="watch-source-title">Was bedeuten A, B, C, D und E?</h2>
+        </div>
+
+        <p class="watch-source-note">
+          Mehrere Buchstaben bedeuten: Der Fall stützt sich auf mehrere Quellenarten.
+        </p>
+      </div>
+
+
+      <div class="watch-source-legend">
+
+        <div class="watch-source-item">
+          <span class="watch-source-badge source-a">A</span>
+          <div>
+            <strong>Amtlich / institutionell</strong>
+            <p>Behörde, offizielles oder wissenschaftlich-institutionelles Dokument.</p>
+          </div>
+        </div>
+
+        <div class="watch-source-item">
+          <span class="watch-source-badge source-b">B</span>
+          <div>
+            <strong>Unabhängiges Medium</strong>
+            <p>Qualitäts- oder Fachmedium mit eigener journalistischer Einordnung.</p>
+          </div>
+        </div>
+
+        <div class="watch-source-item">
+          <span class="watch-source-badge source-c">C</span>
+          <div>
+            <strong>Akteursangabe</strong>
+            <p>Hersteller-, Unternehmens- oder sonstige Eigenangabe zum eigenen System.</p>
+          </div>
+        </div>
+
+        <div class="watch-source-item">
+          <span class="watch-source-badge source-d">D</span>
+          <div>
+            <strong>Sekundärbericht</strong>
+            <p>Ergänzender Branchen- oder Sekundärbericht; zentrale Aussagen möglichst gegenprüfen.</p>
+          </div>
+        </div>
+
+        <div class="watch-source-item">
+          <span class="watch-source-badge source-e">E</span>
+          <div>
+            <strong>Noch zu verifizieren</strong>
+            <p>Quellenbasis ist noch unvollständig oder nicht ausreichend abgesichert.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="watch-method-note">
+        <strong>MSV-Erkenntnisregel:</strong>
+        Belegte Tatsache, Akteurs-/Herstellerangabe, Medienbericht,
+        Prognose und MSV-Interpretation werden getrennt gedacht.
+        Unklare Angaben bleiben sichtbar als „offen“, „unbekannt“ oder „n. a.“.
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>Maschinen-Sozialvertrag · Offenes Diskussionsprojekt</p>
+    <p>Instagram / Facebook: @maschinensozialvertrag</p>
+  </footer>
+
+</body>
+</html>
