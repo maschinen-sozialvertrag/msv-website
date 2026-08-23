@@ -68,9 +68,16 @@ body {
 }
 
 .hero-content {
-  width: min(1100px, calc(100% - 48px));
+  width: min(1240px, calc(100% - 48px));
   margin: 0 auto;
   padding: 90px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-text {
+  width: min(680px, 100%);
+  margin-left: 0;
 }
 
 .hero-label {
