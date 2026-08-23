@@ -246,6 +246,135 @@ li::before {
   font-weight: bold;
 }
 
+/* =========================
+   DOKUMENTE
+   ========================= */
+
+.documents-section {
+  background: var(--white);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-kicker {
+  margin: 0 0 6px;
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.documents-note {
+  max-width: 360px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.document-card {
+  display: flex;
+  gap: 18px;
+
+  padding: 22px;
+
+  background: var(--background);
+  border-left: 4px solid var(--turquoise);
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-2px);
+  border-left-color: var(--orange);
+  box-shadow: 0 8px 24px rgba(16, 47, 56, 0.10);
+}
+
+.document-card-featured {
+  background: var(--orange-light);
+  border-left: 5px solid var(--orange);
+}
+
+.document-number {
+  flex: 0 0 auto;
+
+  color: var(--turquoise);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.document-card-featured .document-number {
+  color: var(--orange);
+}
+
+.document-content h3 {
+  margin: 2px 0 8px;
+
+  color: var(--petrol);
+  font-size: 1.22rem;
+}
+
+.document-content p {
+  margin: 0 0 14px;
+
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.document-badge {
+  display: inline-block;
+
+  margin-bottom: 8px;
+  padding: 4px 8px;
+
+  background: var(--navy);
+  color: var(--white);
+
+  font-size: 0.68rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.document-link {
+  color: var(--petrol);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.document-card:hover .document-link {
+  color: var(--orange);
+}
+
+.documents-footer-note {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
 
 /* =========================
    FOOTER
@@ -270,6 +399,29 @@ footer p {
 
 @media (max-width: 700px) {
 
+  .section-heading {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.documents-note {
+  max-width: none;
+  text-align: left;
+}
+
+.document-grid {
+  grid-template-columns: 1fr;
+}
+
+.document-card {
+  padding: 18px;
+}
+
+.document-number {
+  font-size: 1.5rem;
+}
+  
   html {
     scroll-padding-top: 125px;
   }
