@@ -26,7 +26,51 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(16, 47, 56, 0.97);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
 
+.nav-inner {
+  max-width: 1500px;
+  min-height: 58px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.nav-brand {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
 .hero {
   position: relative;
   min-height: 78vh;
