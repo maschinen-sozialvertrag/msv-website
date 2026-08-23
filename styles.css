@@ -581,7 +581,13 @@ footer p {
     padding-left: 14px;
     padding-right: 14px;
   }
+.watch-grid {
+  grid-template-columns: 1fr;
+}
 
+.watch-card {
+  padding: 18px;
+}
 section {
   margin: 0;
   padding: 24px 20px;
