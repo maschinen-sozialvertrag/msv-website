@@ -256,7 +256,24 @@ footer p {
 }
 
 @media (max-width: 700px) {
+.nav-inner {
+  padding: 10px 18px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
 
+.nav-links {
+  width: 100%;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
   .hero {
     min-height: 68vh;
   }
