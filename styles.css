@@ -53,7 +53,7 @@ body {
 
 .hero {
   position: relative;
-  min-height: 78vh;
+  min-height: 64vh;
   display: flex;
   align-items: stretch;
   overflow: hidden;
@@ -87,54 +87,53 @@ body {
     linear-gradient(
       90deg,
       rgba(16, 47, 56, 0.97) 0%,
-      rgba(16, 47, 56, 0.92) 28%,
-      rgba(16, 47, 56, 0.70) 45%,
-      rgba(16, 47, 56, 0.22) 67%,
-      rgba(16, 47, 56, 0.03) 100%
+      rgba(16, 47, 56, 0.91) 25%,
+      rgba(16, 47, 56, 0.62) 42%,
+      rgba(16, 47, 56, 0.16) 63%,
+      rgba(16, 47, 56, 0.02) 100%
     );
 }
 
 .hero-content {
-  width: min(1320px, calc(100% - 48px));
-  margin: 0 auto;
-  padding: 90px 0;
+  width: 100%;
+  margin: 0;
+  padding: 58px 48px;
 }
 
 .hero-text {
-  width: min(650px, 52%);
+  width: min(590px, 43%);
 }
 
 .hero-label {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   color: var(--turquoise);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: bold;
   letter-spacing: 0.12em;
 }
 
 .hero h1 {
-  margin: 0 0 30px;
-  font-size: clamp(2.8rem, 5.5vw, 5.3rem);
+  margin: 0 0 22px;
+  font-size: clamp(2.7rem, 4.6vw, 4.4rem);
   line-height: 1.02;
 }
 
 .hero-question {
-  margin: 0 0 30px;
-  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  margin: 0 0 22px;
+  font-size: clamp(1.15rem, 1.65vw, 1.55rem);
   line-height: 1.35;
   font-weight: bold;
 }
 
 .hero-thesis {
   margin: 0;
-  padding-left: 20px;
-  border-left: 5px solid var(--orange);
+  padding-left: 16px;
+  border-left: 4px solid var(--orange);
   color: var(--orange);
-  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
   line-height: 1.4;
   font-weight: bold;
 }
-
 main {
   max-width: 1100px;
   margin: 0 auto;
