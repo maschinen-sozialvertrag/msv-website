@@ -470,6 +470,86 @@ li::before {
   line-height: 1.5;
 }
 /* =========================
+   MITDENKEN
+   ========================= */
+
+.think-section {
+  background: var(--white);
+}
+
+.think-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.think-card {
+  padding: 22px;
+  background: var(--background);
+  border-top: 4px solid var(--orange);
+}
+
+.think-number {
+  display: block;
+  margin-bottom: 10px;
+
+  color: var(--orange);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.think-card h3 {
+  margin: 0 0 10px;
+  color: var(--petrol);
+  font-size: 1.15rem;
+}
+
+.think-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.think-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 20px;
+  padding: 20px 22px;
+
+  background: var(--orange-light);
+  border-left: 4px solid var(--orange);
+}
+
+.think-cta p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.social-box {
+  flex: 0 0 auto;
+  padding: 12px 18px;
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+
+.social-box span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--turquoise);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.social-box strong {
+  font-size: 0.95rem;
+}
+/* =========================
    FOOTER
    ========================= */
 
