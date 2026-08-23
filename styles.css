@@ -214,7 +214,7 @@ footer p {
 @media (max-width: 700px) {
 
   .hero {
-    min-height: 72vh;
+    min-height: 68vh;
   }
 
   .hero-image img {
@@ -232,8 +232,8 @@ footer p {
   }
 
   .hero-content {
-    width: calc(100% - 32px);
-    padding: 65px 0 50px;
+    width: 100%;
+    padding: 48px 22px 40px;
   }
 
   .hero-text {
@@ -241,29 +241,25 @@ footer p {
   }
 
   .hero h1 {
-    font-size: clamp(2.5rem, 12vw, 4rem);
+    font-size: clamp(2.35rem, 11vw, 3.5rem);
   }
 
   .hero-question {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .hero-thesis {
-    font-size: 1.1rem;
-  }
-}
-  header {
-    padding: 55px 20px;
+    font-size: 1rem;
   }
 
   main {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   section {
-    margin: 32px 0;
-    padding: 28px 22px;
+    margin: 22px 0;
+    padding: 24px 20px;
   }
 }
 .key-sentence {
