@@ -51,33 +51,57 @@ body {
   display: block;
 }
 
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0;
+  text-align: left;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
 .hero-overlay {
   position: relative;
   z-index: 1;
   width: 100%;
   display: flex;
   align-items: center;
+
   background:
     linear-gradient(
       90deg,
-      rgba(16, 47, 56, 0.96) 0%,
-      rgba(16, 47, 56, 0.82) 42%,
-      rgba(16, 47, 56, 0.30) 72%,
-      rgba(16, 47, 56, 0.08) 100%
+      rgba(16, 47, 56, 0.97) 0%,
+      rgba(16, 47, 56, 0.92) 28%,
+      rgba(16, 47, 56, 0.70) 45%,
+      rgba(16, 47, 56, 0.22) 67%,
+      rgba(16, 47, 56, 0.03) 100%
     );
 }
 
 .hero-content {
-  width: min(1240px, calc(100% - 48px));
+  width: min(1320px, calc(100% - 48px));
   margin: 0 auto;
   padding: 90px 0;
-  display: flex;
-  justify-content: flex-start;
 }
 
 .hero-text {
-  width: min(680px, 100%);
-  margin-left: 0;
+  width: min(650px, 52%);
 }
 
 .hero-label {
@@ -89,27 +113,24 @@ body {
 }
 
 .hero h1 {
-  max-width: 850px;
   margin: 0 0 30px;
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(2.8rem, 5.5vw, 5.3rem);
   line-height: 1.02;
 }
 
 .hero-question {
-  max-width: 780px;
   margin: 0 0 30px;
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
   line-height: 1.35;
   font-weight: bold;
 }
 
 .hero-thesis {
-  max-width: 760px;
   margin: 0;
   padding-left: 20px;
   border-left: 5px solid var(--orange);
   color: var(--orange);
-  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
   line-height: 1.4;
   font-weight: bold;
 }
