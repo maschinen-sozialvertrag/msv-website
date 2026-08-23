@@ -375,7 +375,100 @@ li::before {
   color: var(--muted);
   font-size: 0.82rem;
 }
+/* =========================
+   PRAXISFALL-WACHT
+   ========================= */
 
+.watch-section {
+  background: var(--blue-light);
+}
+
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.watch-card {
+  padding: 22px;
+  background: var(--white);
+  border-top: 4px solid var(--turquoise);
+}
+
+.watch-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.source-b {
+  background: var(--petrol);
+  color: var(--white);
+}
+
+.source-c {
+  background: var(--orange);
+  color: var(--navy);
+}
+
+.watch-card h3 {
+  margin: 0 0 10px;
+  color: var(--petrol);
+  font-size: 1.2rem;
+}
+
+.watch-card p {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+}
+
+.watch-question {
+  padding-left: 14px;
+  border-left: 3px solid var(--orange);
+  font-weight: bold;
+}
+
+.watch-card a {
+  color: var(--petrol);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.watch-card a:hover {
+  color: var(--orange);
+}
+
+.watch-principle {
+  margin-top: 20px;
+  padding: 16px 20px;
+
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--text);
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
 /* =========================
    FOOTER
    ========================= */
