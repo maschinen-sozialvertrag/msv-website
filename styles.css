@@ -1,0 +1,136 @@
+:root {
+  --navy: #102f38;
+  --petrol: #174b55;
+  --turquoise: #5fa9aa;
+  --orange: #d99a58;
+  --orange-light: #f3dcc4;
+  --blue-light: #e4eff0;
+  --background: #f7f7f4;
+  --white: #ffffff;
+  --text: #24393f;
+  --muted: #607278;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 auto 24px;
+  max-width: 1000px;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 1.05;
+}
+
+header p {
+  margin: 0 auto;
+  max-width: 900px;
+  color: var(--orange);
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-weight: bold;
+  line-height: 1.35;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px 80px;
+}
+
+section {
+  margin: 60px 0;
+  padding: 48px;
+  background: var(--white);
+  border-radius: 6px;
+}
+
+section:nth-of-type(even) {
+  background: var(--blue-light);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--petrol);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+}
+
+section:first-child h2 {
+  color: var(--navy);
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+ul {
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  margin: 12px 0;
+  padding: 16px 18px 16px 48px;
+  background: var(--background);
+  border-left: 5px solid var(--orange);
+  font-size: 1.1rem;
+}
+
+li::before {
+  content: "?";
+  position: absolute;
+  left: 18px;
+  top: 13px;
+  color: var(--petrol);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+footer {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 38px 24px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 55px 20px;
+  }
+
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  section {
+    margin: 32px 0;
+    padding: 28px 22px;
+  }
+}
