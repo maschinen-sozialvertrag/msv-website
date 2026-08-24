@@ -13,7 +13,7 @@
 */
 
 const PUBLISHED_WEBANSICHT_URL =
-https://docs.google.com/spreadsheets/d/e/2PACX-1vR5Hm1NjskvrZlwtiruwr3hA_xHZqodSvlunpWPMOS37rIqJb_56chjsbV6-7tUZQDzhB8J8B-iAquk/pubhtml?gid=1611987831&single=true";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5Hm1NjskvrZlwtiruwr3hA_xHZqodSvlunpWPMOS37rIqJb_56chjsbV6-7tUZQDzhB8J8B-iAquk/pubhtml?gid=1611987831&single=true";
 
 const PAGE_STEP = 12;
 
