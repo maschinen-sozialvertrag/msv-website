@@ -18,8 +18,8 @@ const PUBLIC_SHEET_ID =
 const PUBLIC_SHEET_GID =
   "1529330882";
 
-const GVIZ_URL =
-  `https://docs.google.com/spreadsheets/d/${PUBLIC_SHEET_ID}/gviz/tq?gid=${PUBLIC_SHEET_GID}&headers=1`;
+const CSV_URL =
+  `https://docs.google.com/spreadsheets/d/${PUBLIC_SHEET_ID}/gviz/tq?tqx=out:csv&gid=${PUBLIC_SHEET_GID}`;
 
 const PAGE_STEP = 12;
 
