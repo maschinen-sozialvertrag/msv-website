@@ -13,7 +13,7 @@
 */
 
 const PUBLISHED_WEBANSICHT_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5Hm1NjskvrZlwtiruwr3hA_xHZqodSvlunpWPMOS37rIqJb_56chjsbV6-7tUZQDzhB8J8B-iAquk/pubhtml?gid=1611987831&single=true";
+  "https://docs.google.com/spreadsheets/d/1C0Twg1jbKW-_XW_yNLP2lBvrwpZb0myuZAR_od0Oje0/gviz/tq?gid=1107345111&headers=1";
 
 const PAGE_STEP = 12;
 
