@@ -937,3 +937,12 @@ footer p {
   }
 
 }
+footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
