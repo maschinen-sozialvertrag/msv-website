@@ -33,6 +33,11 @@ body {
   line-height: 1.6;
 }
 
+a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
 
 /* =========================
    NAVIGATION
@@ -42,6 +47,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+
   background: rgba(16, 47, 56, 0.97);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -67,6 +73,8 @@ body {
 }
 
 .nav-links {
+  min-width: 0;
+
   display: flex;
   align-items: center;
   gap: 28px;
@@ -77,6 +85,8 @@ body {
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 600;
+  white-space: nowrap;
+
   transition: color 0.2s ease;
 }
 
@@ -91,12 +101,17 @@ body {
 
 .hero {
   position: relative;
+
   min-height: 64vh;
+
   display: flex;
   align-items: stretch;
+
   overflow: hidden;
+
   background: var(--navy);
   color: var(--white);
+
   padding: 0;
   text-align: left;
 }
@@ -109,15 +124,19 @@ body {
 .hero-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center center;
+
   display: block;
 }
 
 .hero-overlay {
   position: relative;
   z-index: 1;
+
   width: 100%;
+
   display: flex;
   align-items: center;
 
@@ -144,7 +163,9 @@ body {
 
 .hero-label {
   margin: 0 0 12px;
+
   color: var(--turquoise);
+
   font-size: 0.82rem;
   font-weight: bold;
   letter-spacing: 0.12em;
@@ -152,12 +173,14 @@ body {
 
 .hero h1 {
   margin: 0 0 22px;
+
   font-size: clamp(2.7rem, 4.6vw, 4.4rem);
   line-height: 1.02;
 }
 
 .hero-question {
   margin: 0 0 22px;
+
   font-size: clamp(1.15rem, 1.65vw, 1.55rem);
   line-height: 1.35;
   font-weight: bold;
@@ -166,8 +189,11 @@ body {
 .hero-thesis {
   margin: 0;
   padding-left: 16px;
+
   border-left: 4px solid var(--orange);
+
   color: var(--orange);
+
   font-size: clamp(1rem, 1.35vw, 1.25rem);
   line-height: 1.4;
   font-weight: bold;
@@ -187,21 +213,24 @@ main {
 section {
   margin: 0;
   padding: 34px 38px;
+
   background: var(--white);
-  border-radius: 0;
-}
-section + section {
-  margin-top: 0;
 }
 
-section:nth-of-type(even) {
+#msv {
+  background: var(--white);
+}
+
+#fragen {
   background: var(--blue-light);
 }
 
 h2 {
   margin-top: 0;
   margin-bottom: 18px;
+
   color: var(--petrol);
+
   font-size: clamp(1.55rem, 3vw, 2.2rem);
   line-height: 1.2;
 }
@@ -211,54 +240,67 @@ p {
   line-height: 1.55;
 }
 
-ul {
+
+/* =========================
+   FÜNF FRAGEN
+   ========================= */
+
+#fragen ul {
   margin: 20px 0 0;
   padding: 0;
+
   list-style: none;
 }
 
-li {
+#fragen li {
   position: relative;
+
   margin: 8px 0;
   padding: 11px 14px 11px 42px;
+
   background: var(--background);
   border-left: 4px solid var(--orange);
+
   font-size: 1rem;
 }
 
-li::before {
+#fragen li::before {
   content: "?";
+
   position: absolute;
   left: 16px;
   top: 9px;
+
   color: var(--petrol);
-  font-weight: bold;
+
   font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .key-sentence {
   margin-top: 22px;
   padding: 16px 20px;
+
   background: var(--orange-light);
   border-left: 4px solid var(--orange);
+
   color: var(--navy);
+
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-/* =========================
-   DOKUMENTE
-   ========================= */
 
-.documents-section {
-  background: var(--white);
-}
+/* =========================
+   GEMEINSAME ABSCHNITTSKÖPFE
+   ========================= */
 
 .section-heading {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 30px;
+
   margin-bottom: 24px;
 }
 
@@ -268,7 +310,9 @@ li::before {
 
 .section-kicker {
   margin: 0 0 6px;
+
   color: var(--orange);
+
   font-size: 0.78rem;
   font-weight: bold;
   letter-spacing: 0.08em;
@@ -277,15 +321,27 @@ li::before {
 .documents-note {
   max-width: 360px;
   margin: 0;
+
   color: var(--muted);
+
   font-size: 0.9rem;
   text-align: right;
+}
+
+
+/* =========================
+   DOKUMENTE
+   ========================= */
+
+.documents-section {
+  background: var(--white);
 }
 
 .document-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+
   margin-top: 14px;
 }
 
@@ -309,7 +365,9 @@ li::before {
 
 .document-card:hover {
   transform: translateY(-2px);
+
   border-left-color: var(--orange);
+
   box-shadow: 0 8px 24px rgba(16, 47, 56, 0.10);
 }
 
@@ -322,6 +380,7 @@ li::before {
   flex: 0 0 auto;
 
   color: var(--turquoise);
+
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1;
@@ -331,10 +390,15 @@ li::before {
   color: var(--orange);
 }
 
+.document-content {
+  min-width: 0;
+}
+
 .document-content h3 {
   margin: 2px 0 8px;
 
   color: var(--petrol);
+
   font-size: 1.22rem;
 }
 
@@ -342,6 +406,7 @@ li::before {
   margin: 0 0 14px;
 
   color: var(--text);
+
   font-size: 0.92rem;
   line-height: 1.5;
 }
@@ -362,6 +427,7 @@ li::before {
 
 .document-link {
   color: var(--petrol);
+
   font-size: 0.9rem;
   font-weight: bold;
 }
@@ -372,9 +438,13 @@ li::before {
 
 .documents-footer-note {
   margin: 20px 0 0;
+
   color: var(--muted);
+
   font-size: 0.82rem;
 }
+
+
 /* =========================
    PRAXISFALL-WACHT
    ========================= */
@@ -387,11 +457,14 @@ li::before {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+
   margin-top: 24px;
 }
 
 .watch-card {
+  min-width: 0;
   padding: 22px;
+
   background: var(--white);
   border-top: 4px solid var(--turquoise);
 }
@@ -400,9 +473,11 @@ li::before {
   display: flex;
   align-items: center;
   gap: 10px;
+
   margin-bottom: 12px;
 
   color: var(--muted);
+
   font-size: 0.78rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -410,6 +485,8 @@ li::before {
 }
 
 .source-badge {
+  flex: 0 0 auto;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -419,6 +496,11 @@ li::before {
 
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+.source-a {
+  background: var(--turquoise);
+  color: var(--navy);
 }
 
 .source-b {
@@ -431,32 +513,85 @@ li::before {
   color: var(--navy);
 }
 
+.source-d {
+  background: var(--orange-light);
+  color: var(--navy);
+}
+
+.source-e {
+  background: var(--muted);
+  color: var(--white);
+}
+
 .watch-card h3 {
   margin: 0 0 10px;
+
   color: var(--petrol);
+
   font-size: 1.2rem;
 }
 
 .watch-card p {
   margin: 0 0 14px;
+
   font-size: 0.92rem;
 }
 
 .watch-question {
   padding-left: 14px;
+
   border-left: 3px solid var(--orange);
+
   font-weight: bold;
 }
 
 .watch-card a {
   color: var(--petrol);
+
   text-decoration: none;
+
   font-size: 0.9rem;
   font-weight: bold;
 }
 
 .watch-card a:hover {
   color: var(--orange);
+}
+
+
+/* Button unter den vier Schaufenster-Fällen */
+
+.watch-more {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.watch-more-button {
+  min-height: 44px;
+  padding: 10px 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--navy);
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-size: 0.88rem;
+  font-weight: bold;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.watch-more-button:hover {
+  background: var(--petrol);
+  color: var(--orange-light);
 }
 
 .watch-principle {
@@ -469,6 +604,8 @@ li::before {
   font-size: 0.82rem;
   line-height: 1.5;
 }
+
+
 /* =========================
    MITDENKEN
    ========================= */
@@ -481,32 +618,40 @@ li::before {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+
   margin-top: 24px;
 }
 
 .think-card {
+  min-width: 0;
   padding: 22px;
+
   background: var(--background);
   border-top: 4px solid var(--orange);
 }
 
 .think-number {
   display: block;
+
   margin-bottom: 10px;
 
   color: var(--orange);
+
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .think-card h3 {
   margin: 0 0 10px;
+
   color: var(--petrol);
+
   font-size: 1.15rem;
 }
 
 .think-card p {
   margin: 0;
+
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -526,21 +671,28 @@ li::before {
 
 .think-cta p {
   margin: 5px 0 0;
+
   font-size: 0.9rem;
 }
 
 .social-box {
   flex: 0 0 auto;
+
   padding: 12px 18px;
+
   background: var(--navy);
   color: var(--white);
+
   text-align: center;
 }
 
 .social-box span {
   display: block;
+
   margin-bottom: 3px;
+
   color: var(--turquoise);
+
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -548,21 +700,54 @@ li::before {
 
 .social-box strong {
   font-size: 0.95rem;
+  overflow-wrap: anywhere;
 }
+
+
 /* =========================
    FOOTER
    ========================= */
 
 footer {
+  padding: 30px 24px;
+
   background: var(--navy);
   color: var(--white);
+
   text-align: center;
-  padding: 30px 24px;
 }
 
 footer p {
   margin: 5px 0;
+
   font-size: 0.9rem;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (min-width: 701px) and (max-width: 950px) {
+
+  .nav-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .hero-text {
+    width: min(560px, 55%);
+  }
+
 }
 
 
@@ -572,52 +757,16 @@ footer p {
 
 @media (max-width: 700px) {
 
-  .section-heading {
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.documents-note {
-  max-width: none;
-  text-align: left;
-}
-
-.document-grid {
-  grid-template-columns: 1fr;
-}
-
-.document-card {
-  padding: 18px;
-}
-
-.document-number {
-  font-size: 1.5rem;
-}
-
-  .think-grid {
-  grid-template-columns: 1fr;
-}
-
-.think-card {
-  padding: 18px;
-}
-
-.think-cta {
-  align-items: stretch;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.social-box {
-  width: 100%;
-}
   html {
     scroll-padding-top: 125px;
   }
 
+
+  /* Navigation */
+
   .nav-inner {
     padding: 10px 18px;
+
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
@@ -626,14 +775,21 @@ footer p {
   .nav-links {
     width: 100%;
     gap: 14px;
+
     overflow-x: auto;
+
     padding-bottom: 4px;
+
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links a {
     font-size: 0.82rem;
     white-space: nowrap;
   }
+
+
+  /* Hero */
 
   .hero {
     min-height: 68vh;
@@ -674,48 +830,110 @@ footer p {
     font-size: 1rem;
   }
 
+
+  /* Hauptinhalt */
+
   main {
     padding-left: 14px;
     padding-right: 14px;
   }
-.watch-grid {
-  grid-template-columns: 1fr;
-}
 
-.watch-card {
-  padding: 18px;
-}
-section {
-  margin: 0;
-  padding: 24px 20px;
-}
+  section {
+    margin: 0;
+    padding: 24px 20px;
+  }
 
   section[id] {
     scroll-margin-top: 125px;
   }
+
+
+  /* Abschnittsköpfe */
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .documents-note {
+    max-width: none;
+    text-align: left;
+  }
+
+
+  /* Dokumente */
+
+  .document-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .document-card {
+    padding: 18px;
+  }
+
+  .document-number {
+    font-size: 1.5rem;
+  }
+
+
+  /* Praxisfall-Wacht */
+
+  .watch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .watch-card {
+    padding: 18px;
+  }
+
+  .watch-more-button {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* Mitdenken */
+
+  .think-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .think-card {
+    padding: 18px;
+  }
+
+  .think-cta {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .social-box {
+    width: 100%;
+  }
+
 }
-.watch-more {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
 
-.watch-more-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  padding: 10px 18px;
 
-  background: var(--navy);
-  color: var(--white);
+/* =========================
+   REDUZIERTE BEWEGUNG
+   ========================= */
 
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: bold;
-}
+@media (prefers-reduced-motion: reduce) {
 
-.watch-more-button:hover {
-  background: var(--petrol);
-  color: var(--orange-light);
+  html {
+    scroll-behavior: auto;
+  }
+
+  .nav-links a,
+  .document-card,
+  .watch-more-button {
+    transition: none;
+  }
+
+  .document-card:hover {
+    transform: none;
+  }
+
 }
