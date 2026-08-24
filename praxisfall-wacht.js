@@ -12,8 +12,14 @@
   → den pubhtml-Link unten eintragen.
 */
 
-const PUBLISHED_WEBANSICHT_URL =
-  "https://docs.google.com/spreadsheets/d/1C0Twg1jbKW-_XW_yNLP2IBvrwpZb0myuZAR_od0Oje0/edit?usp=sharing";
+const PUBLIC_SHEET_ID =
+  "1C0Twg1jbKW-_XW_yNLP2IBvrwpZb0myuZAR_od0Oje0";
+
+const PUBLIC_SHEET_GID =
+  "1529330882";
+
+const GVIZ_URL =
+  `https://docs.google.com/spreadsheets/d/${PUBLIC_SHEET_ID}/gviz/tq?gid=${PUBLIC_SHEET_GID}&headers=1`;
 
 const PAGE_STEP = 12;
 
@@ -62,13 +68,6 @@ const els = {
    Google-Sheets-Link → GViz-Abfrage
 --------------------------------------------------------- */
 
-function buildGvizUrl(publishedUrl) {
-  if (!publishedUrl || publishedUrl.includes("HIER_DEN_")) {
-    throw new Error(
-      "Der veröffentlichte Link zum Tabellenblatt „Webansicht“ wurde noch nicht in praxisfall-wacht.js eingetragen."
-    );
-  }
-
   const url = new URL(publishedUrl);
 
   const match = url.pathname.match(
@@ -99,14 +98,7 @@ function buildGvizUrl(publishedUrl) {
 --------------------------------------------------------- */
 
 function loadPublishedSheet() {
-  let queryUrl;
-
-  try {
-    queryUrl = buildGvizUrl(PUBLISHED_WEBANSICHT_URL);
-  } catch (error) {
-    showLoadError(error.message);
-    return;
-  }
+  const queryUrl = GVIZ_URL;
 
   els.dataStatus.textContent = "Live-Daten werden geladen …";
 
@@ -129,7 +121,7 @@ function loadPublishedSheet() {
 
         if (!allCases.length) {
           throw new Error(
-            "Das veröffentlichte Tabellenblatt enthält keine lesbaren Praxisfälle."
+            "Das öffentliche Tabellenblatt enthält keine lesbaren Praxisfälle."
           );
         }
 
@@ -138,6 +130,7 @@ function loadPublishedSheet() {
 
         els.dataStatus.textContent =
           `${allCases.length} Fälle live aus Google Sheets geladen`;
+
         els.dataStatus.classList.add("is-live");
 
       } catch (error) {
@@ -146,7 +139,6 @@ function loadPublishedSheet() {
     });
   });
 }
-
 
 function dataTableToCases(table) {
   const labels = [];
