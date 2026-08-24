@@ -240,6 +240,15 @@ p {
   line-height: 1.55;
 }
 
+main section > h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  color: var(--navy);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
 
 /* =========================
    FÜNF FRAGEN
