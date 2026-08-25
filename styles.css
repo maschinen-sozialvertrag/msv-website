@@ -712,6 +712,15 @@ main section > h1 {
   overflow-wrap: anywhere;
 }
 
+.social-note {
+  margin: 8px 0 0;
+  max-width: 260px;
+
+  color: var(--white);
+
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
 
 /* =========================
    FOOTER
